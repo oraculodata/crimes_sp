@@ -7,6 +7,21 @@ Os dados foram extraídos do [Portal da Transparência](http://www.ssp.sp.gov.br
 
 Depois de baixados, os dados são tratados e inseridos no [BigQuery](https://cloud.google.com/bigquery) 
 
+**Estou usando a versão "FREE" do BigQuery: <https://cloud.google.com/free?hl=pt-br>**
+
+Depois de criar o dataset na minha instância do BQ, eu criei uma conta de serviço, que é usada para efetuar a carga das tabelas.
+
+No arquivo [config.py](https://github.com/oraculodata/crimes_sp/blob/main/config.py) existe um dicionário com as configurações de dataset e da conta de serviço:
+
+```
+bq = {
+    'key_path': 'transparenciassp-conta-servico.json',
+    'dataset': 'transparenciassp.transparenciassp_data',
+}
+
+(...)
+```
+
 *NOTA: Este é um projeto pessoal que usa dados públicos.*
 
 > Na minha máquina roda um Ubuntu 22.04 LTS. Então as instruções abaixo foram testadas neste ambiente.
