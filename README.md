@@ -9,7 +9,7 @@ Depois de baixados, os dados são tratados e inseridos no [BigQuery](https://clo
 
 *NOTA: Este é um projeto pessoal que usa dados públicos.*
 
-> Na minha máquina roda um Ubuntu 22.04 LTS. Então as instrućões abaixo foram testadas neste ambiente.
+> Na minha máquina roda um Ubuntu 22.04 LTS. Então as instruções abaixo foram testadas neste ambiente.
 
 ## Instalando python, pip e git
 
