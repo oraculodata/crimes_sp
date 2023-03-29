@@ -23,8 +23,8 @@ sudo apt install git
 ## Instalando o Ambiente Virtual para rodar o projeto
 
 ```
- sudo apt-get update 
- sudo apt-get install python3-venv
+ sudo apt update 
+ sudo apt install python3-venv
  python3 -m venv seguranca_sp_venv
  source seguranca_sp_venv/bin/activate
 ```
