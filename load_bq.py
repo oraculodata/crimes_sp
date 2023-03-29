@@ -25,6 +25,10 @@ def main():
 
         df['HORAOCORRENCIA'] = df['HORAOCORRENCIA'].apply(func.fix_tm)
 
+        # Convert text to numeric
+        df['LATITUDE'] = pd.to_numeric(df['LATITUDE'], errors='coerce')
+        df['LONGITUDE'] = pd.to_numeric(df['LONGITUDE'], errors='coerce')
+
         # BQ Loading...
         credentials = service_account.Credentials.from_service_account_file(
             cfg.bq["key_path"],
