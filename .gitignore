@@ -1,4 +1,5 @@
 __pycache__/
 seguranca_sp_venv/
+.idea/
 normaliza_nomes.py
 transparenciassp-conta-servico.json
