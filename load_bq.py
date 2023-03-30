@@ -26,8 +26,8 @@ def main():
         df['HORAOCORRENCIA'] = df['HORAOCORRENCIA'].apply(func.fix_tm)
 
         # Convert text to numeric
-        df['LATITUDE'] = pd.to_numeric(df['LATITUDE'], errors='coerce')
-        df['LONGITUDE'] = pd.to_numeric(df['LONGITUDE'], errors='coerce')
+        df['LATITUDE'] = df['LATITUDE'].str.replace(',', '.').astype(float)
+        df['LONGITUDE'] = df['LONGITUDE'].str.replace(',', '.').astype(float)
 
         # BQ Loading...
         credentials = service_account.Credentials.from_service_account_file(
@@ -38,7 +38,7 @@ def main():
 
         client = bigquery.Client(credentials=credentials, project=credentials.project_id,)
         job_config = bigquery.LoadJobConfig(
-            write_disposition="WRITE_APPEND",
+            write_disposition="WRITE_TRUNCATE",
         )
         job = client.load_table_from_dataframe(
             df, table_target, job_config=job_config

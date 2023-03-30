@@ -6,9 +6,9 @@ bq = {
 ssp = {
     'portal': 'http://www.ssp.sp.gov.br/transparenciassp/',
     'selector': '#cphBody_ExportarBOLink',
-    'crime': 'ROUBO DE CELULAR',
-    'ano': '2022',
-    'mes': 'Novembro',
+    'crime': 'ROUBO DE VEÍCULO',
+    'ano': '2023',
+    'mes': 'Janeiro',
 }
 
 """
