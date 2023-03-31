@@ -38,7 +38,7 @@ def main():
 
         client = bigquery.Client(credentials=credentials, project=credentials.project_id,)
         job_config = bigquery.LoadJobConfig(
-            write_disposition="WRITE_TRUNCATE",
+            write_disposition="WRITE_APPEND",
         )
         job = client.load_table_from_dataframe(
             df, table_target, job_config=job_config
